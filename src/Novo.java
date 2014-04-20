@@ -13,7 +13,7 @@ import java.util.Date;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ScrapeNovo {
+public class Novo {
 
     /**
      * @param args
