@@ -9,17 +9,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-/*
- * Chilie jiangcun
- * 
- * 
- */
+
 public class Edx
 {
 	public static void main(String args[]) throws IOException
 	{
-		int prof_ID = 0;
-		int course_ID = 0;
+		int prof_ID = 30;
    	 
    	 String url1 = "https://www.edx.org/course-list";
    	 String url2 = "https://www.edx.org/course-list?page=1";
@@ -112,7 +107,7 @@ public class Edx
                 university = university.substring(university.indexOf(":")+1);
                 String timeScraped = new SimpleDateFormat("MM-dd-yyyy").format(new Date());
                 
-                String i_value = Integer.toString(course_ID);
+                String i_value = Integer.toString(i+21);
                 writer.append(i_value);
                 writer.append(',');
                 
@@ -136,7 +131,7 @@ public class Edx
                     }
                     
                     String prof_ID_value = Integer.toString(prof_ID);
-                   
+                    prof_ID++;
                     
                     writer_prof.append(prof_ID_value);
                     writer_prof.append(',');
