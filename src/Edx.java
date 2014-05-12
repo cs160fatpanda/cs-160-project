@@ -12,6 +12,7 @@ import org.jsoup.select.Elements;
 
 public class Edx
 {
+<<<<<<< HEAD
     public static void main(String args[]) throws IOException
     {
         int prof_ID = 1;
@@ -46,6 +47,41 @@ public class Edx
        
      String sFileName = "edX.csv";
      String sFileProf = "edXProf.csv";
+=======
+	public static void main(String args[]) throws IOException
+	{
+		int prof_ID = 30;
+   	 
+   	 String url1 = "https://www.edx.org/course-list";
+   	 String url2 = "https://www.edx.org/course-list?page=1";
+   	 String url3 = "https://www.edx.org/course-list?page=2";
+   	 String url4 = "https://www.edx.org/course-list?page=3";
+   	 String url5 = "https://www.edx.org/course-list?page=4";
+   	 String url6 = "https://www.edx.org/course-list?page=5";
+   	 String url7 = "https://www.edx.org/course-list?page=6";
+   	 String url8 = "https://www.edx.org/course-list?page=7";
+   	 String url9 = "https://www.edx.org/course-list?page=8";
+   	 String url10 = "https://www.edx.org/course-list?page=9";
+   	 String url11 = "https://www.edx.org/course-list?page=10";
+   	 String url12 = "https://www.edx.org/course-list?page=11";
+   	 
+   	 ArrayList pgcrs = new ArrayList<String>();
+   	 pgcrs.add(url1);
+   	 pgcrs.add(url2);
+   	 pgcrs.add(url3);
+   	 pgcrs.add(url4);
+   	 pgcrs.add(url5);
+   	 pgcrs.add(url6);
+   	 pgcrs.add(url7);
+   	 pgcrs.add(url8);
+   	 pgcrs.add(url9);
+   	 pgcrs.add(url10);
+   	 pgcrs.add(url11);
+	 pgcrs.add(url12);
+   	 
+	 String sFileName = "/Users/parthvyas/Desktop/Parth/cs160/edX.csv";
+	 String sFileProf = "/Users/parthvyas/Desktop/Parth/cs160/edXProf.csv";
+>>>>>>> FETCH_HEAD
      
     FileWriter writer = new FileWriter(sFileName);
      FileWriter writer_prof = new FileWriter(sFileProf);
@@ -149,9 +185,14 @@ public class Edx
                 university = university.substring(university.indexOf(":")+1).replace(",", "");
                 String timeScraped = new SimpleDateFormat("MM-dd-yyyy").format(new Date()).replace(",", "");
                 
+<<<<<<< HEAD
                 String i_value = Integer.toString(course_ID);
                 course_ID++;
                writer.append(i_value);
+=======
+                String i_value = Integer.toString(i+21);
+                writer.append(i_value);
+>>>>>>> FETCH_HEAD
                 writer.append(',');
                 
                 Elements staff = innerDoc.select("h4[class=staff-title]");

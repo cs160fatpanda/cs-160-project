@@ -28,9 +28,15 @@ public class Novo {
         int counter = 0;
         String url1 = "https://novoed.com/courses";
         
+<<<<<<< HEAD
         String sFileName = "Novo.csv";
                 
         String sFileProf = "NovoProf.csv";
+=======
+        String sFileName = "/Users/parthvyas/Desktop/Parth/cs160/Novo.csv";
+                
+        String sFileProf = "/Users/parthvyas/Desktop/Parth/cs160/NovoProf.csv";
+>>>>>>> FETCH_HEAD
         
         FileWriter writer = new FileWriter(sFileName);
         FileWriter writer_prof = new FileWriter(sFileProf);
@@ -48,7 +54,11 @@ public class Novo {
             Elements links = doc.select("h2[class][style]").select("a");
             Elements startDates = doc.select("div[class=timeline independent-text]");
             Elements shortDescription = doc.select("p[class][style]");
+<<<<<<< HEAD
             Elements img = doc.select("div[class=course-cover][style=width: 100%]").select("img[src]");
+=======
+            Elements img = doc.select("div[class=course-cover]").select("img[src]");
+>>>>>>> FETCH_HEAD
         
             for (int i=0; i<links.size(); i++)
             {
@@ -64,6 +74,7 @@ public class Novo {
                 String long_desc = innerDoc.select("article[class][style]").select("p").text();
                 long_desc = long_desc.replace(",", "");
                 
+<<<<<<< HEAD
                 String courseLink = (String) links.get(i).attr("abs:href").replace(",", "");
                 
                 
@@ -72,6 +83,17 @@ public class Novo {
                 String start = innerDoc
                         .select("div[class=timeline inline-block]").first().text();
                 start = start.replace(",", "");
+=======
+                String courseLink = (String) links.get(i).attr("abs:href");
+                
+                
+                String video_link = (String) innerDoc.select("iframe[src]").attr("abs:src");
+                
+            	String start = innerDoc
+						.select("div[class=timeline inline-block]").first()
+						.text();
+				start = start.replace(",", "");
+>>>>>>> FETCH_HEAD
                 start = start.trim();
 
                 if (start.contains("Starting")) {
@@ -100,6 +122,7 @@ public class Novo {
 
                 else {
 
+<<<<<<< HEAD
                     String month = start.substring(0, start.indexOf(" ")).replace(",", "");
                     String day = start.substring(start.indexOf(" ") + 1,
                             start.indexOf(" ") + 3).replace(",", "");
@@ -148,6 +171,13 @@ public class Novo {
                     start = year+"-"+month +"-"+day;}
                 
                 String duration = "5";
+=======
+					String year = start.substring(start.length() - 4,
+							start.length());
+					start = year+"-"+month +"-"+day;}
+				
+				String duration = "5";
+>>>>>>> FETCH_HEAD
                 
                 String courseIMG = (String) img.get(i).attr("abs:src");
                 
@@ -158,7 +188,11 @@ public class Novo {
                 String siteURL = "https://novoed.com/";
                 
                 String price = prices.get(i).text();
+<<<<<<< HEAD
                   if (price.contains("Free") ||price.contains("$"))  {price = "0"; };
+=======
+				  if (price.contains("Free") ||price.contains("$"))  {price = "0"; };
+>>>>>>> FETCH_HEAD
                 
                 String language = "English";
                 
@@ -251,6 +285,9 @@ public class Novo {
         }
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> FETCH_HEAD
 
 
