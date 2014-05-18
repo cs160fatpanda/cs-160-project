@@ -1,0 +1,618 @@
+﻿/*** The All So Important RESET! ***/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ol, ul, label, legend, caption, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+ol, ul, li {
+	list-style: none;
+	text-align: right;
+}
+a img {
+	border: none
+}
+button {
+	outline: none;
+}
+aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block
+}
+/************************ Basics ************************/
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	background-color: #fff;
+	color: #191919;
+	margin: 0 0 1px;
+	height: 100%;
+	line-height: 1.5;
+}
+body: before {
+	content: "";
+	position: fixed;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	z-index: 100;
+}
+p {
+	margin-bottom: 7px;
+}
+@font-face {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+h1.fontface {
+	font: 60px/68px 'BoycottRegular', Arial, sans-serif;
+	letter-spacing: 0;
+}
+h2.fontface {
+	font: 48px/52px 'BoycottRegular', Arial, sans-serif;
+	letter-spacing: 0;
+}
+p.style1 {
+	font: 18px/27px 'BoycottRegular', Arial, sans-serif;
+}
+a, p a {
+	text-decoration: none;
+	color: #879896;
+}
+a:hover {
+	color: #879896;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	position: relative;
+}
+h1 {
+	font-size: 45px;
+	line-height: 0.9;
+	color: #191919;
+	text-align: left;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+h2 {
+	font-size: 28px;
+	line-height: 1.3;
+	color: #191919;
+	text-transform: none;
+	font-style: bold;
+	text-align: center;
+	margin-top: 7px;
+	padding-bottom: 6px;
+}
+h3 {
+	font-size: 23px;
+	line-height: 0.9;
+	color: #191919;
+	text-align: left;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+.leftfloat {
+	float: left;
+	clear: both;
+}
+h3 span {
+	font-size: 12px;
+	line-height: 1.4;
+	color: white;
+	display: block;
+	margin-top: 10px;
+	text-transform: none;
+}
+h4 {
+	font-size: 23px;
+	line-height: 0.9;
+	color: white;
+	text-align: left;
+	margin-bottom: 12px;
+	padding-bottom: 10px;
+}
+h4 span {
+	font-size: 12px;
+	line-height: 1.4;
+	color: white;
+	display: block;
+	margin-top: 10px;
+	text-transform: none;
+}
+header {
+	position: relative;
+	background: #191919;
+	width: 100%;
+	height: 100px;
+	display: block;
+}
+header#bottom {
+	margin: 72px auto;
+}
+div.bottom {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	height: 3px;
+	width: 100%;
+	background: #666;
+}
+footer {
+	height: 100px;
+	clear: both;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	color: #fff;
+}
+/************************ Containers ************************/
+#bottomBar {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	height: 20px;
+	width: 100%;
+	text-align: center;
+	background: #191919;
+}
+#container {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	background-color: transparent;
+	min-height: 100%;
+}
+#containerCenter {
+	position: relative;
+	top: 30px;
+	width: 400px;
+	margin: 0 auto;
+	background-color: transparent;
+	min-height: 100%;
+}
+.container1 {
+	margin: 0 auto;
+	margin-left: 8%;
+	margin-right: auto;
+	background-color: transparent;
+	padding-top: 20px;
+	position: relative;
+}
+#intro {
+	width: 100%;
+	position: relative;
+	float: left;
+	height: auto;
+	padding: 10px;
+	background: transparent;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#introLogin {
+	width: 20%;
+	position: center;
+	float: left;
+	height: auto;
+	padding: 10px;
+	background: transparent;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+/************************ Navigation Menu ************************/
+nav {
+	position: relative;
+	width: 980px;
+	height: 40px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+nav ul li {
+	float: right;
+	line-height: normal;
+	margin-left: 55px;
+}
+nav ul li a {
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	text-transform: capitalize;
+	font-weight: normal;
+	display: block;	/* IE6, IE7 line height fix */
+	background-color: transparent;
+	text-decoration: none;
+	margin-top: 3px;
+	padding: 5px;
+	-moz-opacity: 0.66;
+	-khtml-opacity: 0.66;
+	opacity: 0.66;
+}
+.white {
+	color: #FFFFFF;
+}
+.black {
+	color: #000000;
+}
+.large {
+	font-size: 72px;
+}
+.medium {
+	font-size: 50px;
+}
+.small {
+	font-size: 25px;
+}
+/************************ Specifics ************************/
+#title {
+	float: left;
+	width: 250px;
+	height: 100px;
+}
+<!--
+Search Bar
+-->
+.cf:before, .cf:after {
+ content:"";
+ display:table;
+}
+.cf:after {
+	clear: both;
+}
+.cf {
+	zoom: 1;
+}
+/* Form wrapper styling */
+.form-wrapper {
+	width: 450px;
+	height: 50px;
+	padding: 5px;
+	margin: 50px auto 50px auto;
+	background: #fff;
+	background: rgba(0,0,0,.5);
+	border-radius: 10px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+/* Sear Form Wrapper */
+ 
+.form-wrapper input {
+	width: 340px;
+	height: 50px;
+	padding: 10px 5px;
+	float: left;
+	font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	border: 0;
+	background: #F0F0F0;
+	border-radius: 3px 3px 0 3px;
+}
+.form-wrapper input:focus {
+	outline: 0;
+	background: #fff;
+	box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+ .form-wrapper input::-webkit-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+ .form-wrapper input:-moz-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+ .form-wrapper input:-ms-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+/* Form submit button */
+.form-wrapper button {
+	overflow: visible;
+	position: relative;
+	float: right;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	height: 50px;
+	width: 110px;
+	font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	color: #fff;
+	text-transform: uppercase;
+	background: #879896;
+	border-radius: 0 3px 3px 0;
+	text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+.form-wrapper button:hover {
+	background: #c1dad7;
+}
+.form-wrapper button:active, .form-wrapper button:focus {
+	background: #879896;
+	outline: 0;
+}
+.form-wrapper button:before { /* left arrow */
+	content: '';
+	position: absolute;
+	border-width: 8px 8px 8px 0;
+	border-style: solid solid solid none;
+	border-color: transparent #879896 transparent;
+	top: 12px;
+	left: -6px;
+}
+.form-wrapper button:hover:before {
+	border-right-color: #c1dad7;
+}
+.form-wrapper button:focus:before, .form-wrapper button:active:before {
+	border-right-color: #879896;
+}
+ .form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+ border: 0;
+ padding: 0;
+}
+<!--
+Table
+-->
+#mytable {
+ width: 100%;
+ padding: 0;
+ margin: 0;
+}
+th {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA no-repeat;
+	outline: none;
+}
+.thbutton {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	outline: none;
+}
+.thbutton:hover {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #64c2d9;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	outline: none;
+}
+th.nobg {
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid #C1DAD7;
+	background: none;
+}
+td {
+	font: 11px "BoycottRegular", Verdana, Arial, Helvetica, sans-serif;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+}
+td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
+th.spec {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #fff url(images/bullet1.gif) no-repeat;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+th.specalt {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #f5fafa url(images/bullet2.gif) no-repeat;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #797268;
+}
+/* Login Form Header Styling */
+.login-form-header {
+	float: left;
+	width: 340px;
+	height: 65px;
+	padding: 5px;
+	margin: 0px 0 0 0;
+	background: #fff;
+	background: rgba(0,0,0,.5);
+	border-radius: 10px 10px 0px 0px;
+	color: #879896;
+	font: 36px/52px 'BoycottRegular', Arial, sans-serif;
+	letter-spacing: 0;
+	text-align: center;
+}
+/* Login Form wrapper styling */
+.login-form-wrapper {
+	width: 340px;
+	height: 205px;
+	padding: 5px;
+	margin: 75px auto 50px auto;
+	background: #fff;
+	background: rgba(0,0,0,.5);
+	border-radius: 0px 0px 10px 10px;
+}
+/* Login Form Wrapper */
+ 
+.login-form-wrapper input {
+	width: 330px;
+	height: 50px;
+	padding: 10px 5px;
+	float: left;
+	font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	border: 0;
+	background: #F0F0F0;
+	border-radius: 3px 3px 0 3px;
+}
+.login-form-wrapper input:focus {
+	outline: 0;
+	background: #fff;
+	box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+ .login-form-wrapper input::-webkit-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+ .login-form-wrapper input:-moz-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+ .login-form-wrapper input:-ms-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+/* Form submit button */
+.login-form-wrapper button {
+	overflow: visible;
+	position: relative;
+	float: center;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	height: 50px;
+	width: 340px;
+	font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	color: #fff;
+	text-transform: uppercase;
+	background: #879896;
+	border-radius: 3px 3px 3px 3px;
+	text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+.login-form-wrapper button:hover {
+	background: #c1dad7;
+}
+.login-form-wrapper button:active, .login-form-wrapper button:focus {
+	background: #c1dad7;
+	outline: 0;
+}
+.login-form-wrapper button:hover:before {
+	border-right-color: #c1dad7;
+}
+.login-form-wrapper button:focus:before, .login-form-wrapper button:active:before {
+	border-right-color: #879896;
+}
+ .login-form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+ border: 0;
+ padding: 0;
+}
+/* register Form Header Styling */
+.register-form-header {
+	float: left;
+	width: 340px;
+	height: 65px;
+	padding: 5px;
+	margin: 0px 0 0 0;
+	background: #fff;
+	background: rgba(0,0,0,.5);
+	border-radius: 10px 10px 0px 0px;
+	color: #879896;
+	font: 36px/52px 'BoycottRegular', Arial, sans-serif;
+	letter-spacing: 0;
+	text-align: center;
+}
+/* register Form wrapper styling */
+.register-form-wrapper {
+	width: 340px;
+	height: 430px;
+	padding: 5px;
+	margin: 75px auto 50px auto;
+	background: #fff;
+	background: rgba(0,0,0,.5);
+	border-radius: 0px 0px 10px 10px;
+}
+/* register Form Wrapper */
+ 
+.register-form-wrapper input {
+	width: 330px;
+	height: 50px;
+	padding: 10px 5px;
+	float: left;
+	font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	border: 0;
+	background: #F0F0F0;
+	border-radius: 3px 3px 0 3px;
+}
+.register-form-wrapper input:focus {
+	outline: 0;
+	background: #fff;
+	box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+ .register-form-wrapper input::-webkit-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+ .register-form-wrapper input:-moz-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+ .register-form-wrapper input:-ms-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+/* Form submit button */
+.register-form-wrapper button {
+	overflow: visible;
+	position: relative;
+	float: center;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	height: 50px;
+	width: 340px;
+	font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	color: #fff;
+	text-transform: uppercase;
+	background: #879896;
+	border-radius: 3px 3px 3px 3px;
+	text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+.register-form-wrapper button:hover {
+	background: #c1dad7;
+}
+.register-form-wrapper button:active, .register-form-wrapper button:focus {
+	background: #c1dad7;
+	outline: 0;
+}
+.register-form-wrapper button:hover:before {
+	border-right-color: #c1dad7;
+}
+.register-form-wrapper button:focus:before, .register-form-wrapper button:active:before {
+	border-right-color: #879896;
+}
+ .register-form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+ border: 0;
+ padding: 0;
+}

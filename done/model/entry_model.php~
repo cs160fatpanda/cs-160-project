@@ -1,0 +1,87 @@
+<?php
+
+	class entry_model
+	{
+	/** 
+	make connection to database
+	*/
+		
+		
+		public function mainPageQuery()
+		{
+		
+		$con=mysqli_connect("127.0.0.1","root","","cs160moocs");
+			if (mysqli_connect_errno($con))
+			{
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			}
+			//get the scraped data from database
+		$result=mysqli_query($con,"SELECT course_data.*,coursedetails.prof_name,coursedetails.prof_image 
+FROM course_data,coursedetails
+WHERE course_data.id = coursedetails.course_id
+group by course_data.id
+ order by rand() limit 5");
+		
+		$i = 0;
+		
+		if($result)
+		{
+           		while($row = mysqli_fetch_array($result))
+	  		{
+			$array[$i] = array("id" => $row['id'],"course_image" => $row['course_image'], "title" => $row['title'],
+			"short_desc" => $row['short_desc'], "category" => $row['category'], "date" => $row['start_date'], 
+			"course_length" => $row['course_length'], "site" => $row['site'],"prof_name" => $row['prof_name'],"prof_image" => $row['prof_image']);
+			$i++;
+			}
+		}
+		return $array;
+		}
+		
+		public function searchResultQuery($query)
+		{
+			$con=mysqli_connect("127.0.0.1","root","","cs160moocs");
+			if (mysqli_connect_errno($con))
+			{
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			}
+			  $min_length = 3; // sets min length
+			$i = 0;
+			$array2 = [];
+    			if(strlen($query) >= $min_length){ // makes sure it's equal to the min length
+	
+       			 $query = htmlspecialchars($query); //converts special characters
+		
+        		$raw_results = mysqli_query($con,"SELECT course_data.*,coursedetails.prof_name,coursedetails.prof_image
+				FROM course_data,coursedetails
+            			WHERE ((`title` LIKE '%".$query."%') 
+				OR (`short_desc` LIKE '%".$query."%')
+				OR (`category` LIKE '%".$query."%')
+				OR (`site` LIKE '%".$query."%')
+				OR (`language` LIKE '%".$query."%')
+				OR (`university` LIKE '%".$query."%')
+				OR (`start_date` LIKE '%".$query."%')
+				OR (`course_length` LIKE '%".$query."%')
+				OR (`long_desc` LIKE '%".$query."%'))
+				AND course_data.id = coursedetails.course_id
+				group by course_data.id				
+				");
+		
+			if($raw_results)
+		{
+           		while($row = mysqli_fetch_array($raw_results))
+	  		{
+			$array2[$i] = array("id" => $row['id'],"course_image" => $row['course_image'], "title" => $row['title'],
+			"short_desc" => $row['short_desc'], "category" => $row['category'], "date" => $row['start_date'], 
+			"course_length" => $row['course_length'], "site" => $row['site'],"prof_name" => $row["prof_name"],"prof_image" => $row['prof_image']);
+			$i++;
+			}
+		}
+		
+		}
+		else {$array2 = self::mainPageQuery();}
+		return $array2;
+		
+		}
+
+	}
+?>
